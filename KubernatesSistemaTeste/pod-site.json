@@ -1,0 +1,24 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "site-pod",
+    "labels": {
+      "app": "exemplo-site-kubernates"
+    }
+  },
+  "spec": {
+    "containers": [{
+      "name": "exemplo-site-kubernates",
+      "image": "tiago2655/app-estudo-kubernate",
+      "env": [{
+        "name": "PORT",
+        "value": "8080"
+      }],
+      "ports": [{
+        "containerPort": 8080,
+        "name": "porta-site"
+      }]
+    }]
+  }
+}
